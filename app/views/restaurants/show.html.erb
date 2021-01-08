@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+   
+    </style>
+  </head>
+<body>
+
+
+<h1><b>Welcome to <%= @restaurant.name %>!</b></h1>
+<hr>
+<h2><b>Address:</b> <%= @restaurant.address %></h2>
+<h2><b>Type:</b> <%= @restaurant.food_type %></h2>
+<h2><b>Description:</b> <%= @restaurant.description %></h2>
+
+
+
+<hr>
+
+    <h2><b>Please read some of the most recent reviews below!</b></h2>
+        <ul>
+        <% @recent_five.each do |review|%>
+        <br>
+                <li>
+                   <h4><b> <%=review.user.name %>'s Review </b></h4>
+                    <h4> Rating: <%=review.rating%> </h4>
+                    <h4> Description: <%=review.description%> </h4>
+                    <%=link_to "See Comments", review_path(review)%>
+                </li>
+                <div><small>Submitted <%= time_ago_in_words(review.created_at) %> ago</small></div>
+                <%end%>
+        
+        </ul>
+
+<br/>
+
+<h4> <%= button_to "Leave a review", new_review_path, method: :get %></h4>
+
+<h4><%= link_to "Return to all restaurants!", restaurants_path %></h4>
+<h4><%= link_to "Return to User Page", user_path(session[:id])%></h4>
+<h4><%= link_to "Return to cities Page", cities_path%>
+<%= button_to "Log out", logout_path, method: :delete %>
+
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,79 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    max-height: 510px;
+    max-width: auto;
+    object-fit: cover;
+
+    @media screen and (min-width: 768px){
+      max-height: 800px;
+    }
+
+  }
+
+  h1 {
+    font-family: "Abril Fatface";
+    
+  }
+
+  header {
+      font-family: "Quicksand";
+  }
+
+  body {
+      font-family: "Quicksand";
+      margin: 100px 100px;
+  }
+
+  #welcome {
+    background-image: url(https://images.unsplash.com/photo-1462015679637-c0c320830925?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+    background-size: cover;
+    
+  }
+
+  .overlay {
+      background-color: rgba(236, 229, 229, 0.7);
+  }
+
+  .coaches {
+    max-width: auto;
+    max-height: auto;
+}
+
+.coach {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.coach-headshot{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .coach-headshot img{
+    object-fit: cover;
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+
+}
+
+  // body  {
+  //   background-image: url(""https://images.unsplash.com/photo-1414235077428-338989a2e8c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMjA3fDB8MXxzZWFyY2h8MXx8cmVzdGF1cmFudHx8MHx8fA&ixlib=rb-1.2.1&q=80&w=1080);
+  //   background-color: #cccccc;
+  // }
+
+//   img {
+//    
+//   }
+  
+  

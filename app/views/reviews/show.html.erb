@@ -1,0 +1,53 @@
+<h1><%=@review.restaurant.name%> Review</h1>
+
+<br/>
+
+<h2>Author: <%= @review.user.name %></h2>
+<h2>Rating: <%= @review.rating %></h2>
+<h2>Written Review: <%= @review.description %></h2>
+<small>Submitted <%= time_ago_in_words(@review.created_at) %> ago</small>
+
+<br>
+<br>
+
+<%= form_for @comment do |f| %>
+    <%= f.hidden_field :reply %>
+    <%= f.text_area :reply, placeholder: "Add a comment" %>
+    <br>
+    <%= f.hidden_field :review_id, :value => @review.id%>
+    <%= f.hidden_field :user_id, :value => session[:id]%>
+    <%= f.submit %>
+<% end %>
+<br>
+<h3>Comments</h3>
+<ul>
+<% @review.comments.each do |comment| %>
+    <li><h4><%= "#{comment.user.name} - #{comment.reply}"%></h4></li>
+    <small>Commented <%= time_ago_in_words(comment.created_at) %> ago</small>
+<%end%>
+<ul>
+
+<br>
+
+<h3>If you would like to edit your review, please click below - </h3>
+
+<%= button_to "Edit Review", edit_review_path, method: :get %>
+
+<br>
+
+<h3>If you would like to delete this review, please click below - </h3>
+
+
+<%= form_for @review, method: :delete do |f|%>
+<%= f.submit "Delete Review"%>
+<%end%>
+
+<br>
+
+<h3><%= link_to "Return to #{@review.restaurant.name} info and reviews", restaurant_path(@review.restaurant) %></h3>
+
+<h3><%= link_to "Return to all restaurants", restaurants_path %></h3>
+
+<h3><%= link_to "Home", sessions_new_path%></h3>
+
+<h3><%= button_to "Log out", logout_path, method: :delete %></h3>

@@ -1,0 +1,24 @@
+
+
+
+
+
+<h1>Oh, the wonderful city of <%= @city.name %>!</h1>
+
+<br/>
+
+<h2>Location: <%= @city.name %>, <%= @city.state %> </h2>
+
+<br/>
+
+<h2>Restaurants</h2>
+
+<%@city.restaurants.each do |restaurant|%>
+<li>
+    <%= link_to restaurant.name, restaurant_path(restaurant) %>
+</li>
+<%end%>
+
+<h3><%= link_to "Return to all cities", cities_path %></h3>
+
+

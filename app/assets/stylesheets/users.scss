@@ -1,0 +1,22 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.user-page{
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.user-page img{
+    object-fit: cover;
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+
+}
+
+

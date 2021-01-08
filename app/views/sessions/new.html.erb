@@ -1,0 +1,132 @@
+
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+ <i class="em em-hamburger" aria-role="presentation" aria-label="HAMBURGER"></i>
+    <div class="d-flex"><% if flash[:errors] %>
+
+<li style="color:red"> <%= flash[:errors] %> </li>
+
+
+
+<% end %>
+
+<%= form_for @user,  :url => '/login' do | f | %>
+<%= f.label :email %>
+<%= f.text_field :email %>
+
+<%= f.label :password %>
+<%= f.password_field :password %>
+
+<%= f.submit 'Log In', class: "btn btn-dark"%>
+
+<% end %>
+<%= button_to "Create Account", signup_path, class: "btn btn-dark ml-2"%>
+<%= button_to "Log out", logout_path, method: :delete, class: "btn btn-dark ml-2"  %>
+
+
+  </div>
+</nav>
+</div>
+
+
+
+
+<div class= "container-fluid position-relative overflow-hidden p-4 p-md-5 text-center bg-light mt-4" id="welcome">
+<div class= "overlay">
+    <h1 class="display-1">Flavor Finder</h1>
+
+    <h2>The place to find the best flavors in your favorite cities!</h2>
+
+    <br>
+
+    <h3>Please login in above to begin your search! </h3>
+<br>
+</div>
+</div>
+<header>
+</div>
+</div>
+
+<br>
+
+<div class="bg-dark p-3 p-md-5 text-center text-white overflow-hidden mb-4">
+<figure class="text-center">
+  <blockquote class="blockquote">
+    <h3>Flavor Finder is the best! It's easy to use, and always provides the best options in my favorite cities!</h3>
+  </blockquote>
+  <figcaption class="blockquote-footer text-white" >
+    Raul Sanchez <cite title="Flatiron Weekly">Flatiron Weekly</cite>
+  </figcaption>
+</figure>
+</div>
+</header>
+
+<body>
+<div id="carouselExampleControls" class="carousel slide carousel-fade mx-auto" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://37g8q83dpternslae3eh1f8t-wpengine.netdna-ssl.com/wp-content/uploads/2020/06/ahomka_eastlondon-2000x1125.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        <h2>Finding a restaurant should be a painless task. Let us make it easy for you.</h2>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.foodbusinessnews.net/ext/resources/2020/4/CoupleAtRestaurant_Lead.jpg?t=1587991293&width=1080" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        <h2>Finding a restaurant should be a painless task. Let us make it easy for you.</h2>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.indianexpress.com/2018/03/friends-party-restaurant-eating-thinkstockphotos-759.jpg" class="d-block w-100" alt="...">
+    <div class="carousel-caption d-none d-md-block">
+        <h2 class="text-white">Finding a restaurant should be a painless task. Let us make it easy for you.</h2>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+<br>
+<br>
+<br>
+            <div class="coaches">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">What people are saying about Flavor Finder!</h2>
+                </div>
+                <br>
+                
+                    <div class="row text-center">
+                    <div class="col-md-4 coach">
+                            <div class="coach-headshot"><img src="https://media-exp1.licdn.com/dms/image/C4E03AQEeqsA2qqu7MQ/profile-displayphoto-shrink_400_400/0/1599877968870?e=1615420800&v=beta&t=bQDUCON2qLyRnD0kcBkiqwBlh87UdFT7tKoyeDRt4cI" class="d-block w-100" alt="..."></div>
+                        <h4 class="my-3">Angelo</h4>
+                        <p class="text-muted">"So easy, a caveman could do it."</p>
+                    </div>
+                    <div class="col-md-4 coach">
+                            <div class="coach-headshot"><img src="https://media-exp1.licdn.com/dms/image/C4E03AQE7Wr8jb8sH7Q/profile-displayphoto-shrink_400_400/0/1594741967704?e=1615420800&v=beta&t=7bVBXqP_qiagwC7doqM4WcxEZmgyEc8w3ylk7S_qNHQ"></div>
+                        <h4 class="my-3">Mansour</h4>
+                        <p class="text-muted">"Just do it."</p>
+                    </div>
+                    <div class="col-md-4 coach">
+                            <div class="coach-headshot"><img src=https://media-exp1.licdn.com/dms/image/C4D03AQHm_sgukftbaQ/profile-displayphoto-shrink_400_400/0/1581368777494?e=1615420800&v=beta&t=meoXgrX3slxHiSutsTmglcwxhxuA82xFcTUdKVZzcHg></div>
+                        <h4 class="my-3">Dane</h4>
+                        <p class="text-muted">"The app that smiles back. Flavor Finder."</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+</body>
+
+<div class="bg-dark p-3 p-md-5 m-md-3  text-center text-white overflow-hidden">
+<h5>If you have questions, please don't hesitate to contact us at flavorfinder@yum.com or at 1-800-FOOD</h5>
+</div>
+
+
+
+
