@@ -4,7 +4,7 @@
 
 ## What is it?
 
-Flavr Findr is an app created with only using Ruby on Rails! Both the frontend and backed are Rails!
+Flavr Findr is an app created by only using Ruby on Rails! Both the frontend and backed are Rails!
 
 ## What does it do?
 
