@@ -1,24 +1,19 @@
-# README
+# Welcome to Flavr Findr the restaurant searching application.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<img src="https://i.imgur.com/HpUwlrO.png" />
 
-Things you may want to cover:
+## What is it?
 
-* Ruby version
+Flavr Findr is an app created with only using Ruby on Rails! Both the frontend and backed are Rails!
 
-* System dependencies
+## What does it do?
 
-* Configuration
+Flavr Findr allows you to browse restaurants by restaurant name or city. It also allows you to leave reviews and comment on other people's reviews!
 
-* Database creation
+(clone repo locally then run 'rails s' in the terminal and navigate to localhost:3000)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* To start, create an account using the sign-up button.
+* Afterwards you should be redirected to your personal user page.
+* From there select whether to browse restaurants or cities.
+* Select cities to view restaurants and select restaurants to write reviews or comment on reviews
+* Enjoy!
